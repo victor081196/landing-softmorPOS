@@ -89,7 +89,7 @@
                             </a>
                         </li>
                         <li class="d-none d-md-block">
-                            <a href="#" class="template-btn primary-bg-5">
+                            <a href="#" class="template-btn primary-bg-5" data-toggle="modal" data-target="#modelId">
                                 Crear cuenta <i class="fas fa-user-plus"></i>
                             </a>
                         </li>
@@ -535,7 +535,7 @@
                             <input class="toggle-state" type="checkbox" name="check" value="check" checked />
                             <div class="indicator"></div>
                         </div>
-                        <div class="label-text"> <strong>Anual</strong>  ( 2 meses gratis 🎁  )</div>
+                        <div class="label-text"> <strong>Anual</strong> ( 2 meses gratis 🎁 )</div>
                     </label>
                 </div>
             </div>
@@ -826,3 +826,48 @@
 </body>
 
 </html>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary-color">
+                <h5 class="modal-title text-white"><i class="fas fa-user"></i> Crear cuenta</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="contact-form-v2">
+                        <div class="input-field m-b-30">
+                            <input type="text" id="usr_nombre" placeholder="Nombre completo" name="usr_nombre"
+                                required="">
+                            <label for="usr_nombre">Nombre</label>
+                        </div>
+                        <div class="input-field m-b-30">
+                            <input type="email" id="usr_correo" placeholder="Correo electrónico" name="usr_correo"
+                                required="">
+                            <label for="usr_correo">Correo</label>
+                        </div>
+                        <div class="input-field m-b-30">
+                            <input type="text" id="usr_tel" placeholder="Telefono" name="usr_tel" required="">
+                            <label for="usr_tel">Telefono</label>
+                        </div>
+                        <div class="input-field m-b-30">
+                            <input type="password" id="usr_clave" placeholder="Contraseña" name="usr_clave" required="">
+                            <label for="usr_clave">Password</label>
+                        </div>
+                        <div class="input-field m-b-30">
+                            <input type="password" id="usr_clave_c" placeholder="Confirmar Contraseña" name="usr_clave_c" required="">
+                            <label for="usr_clave_c">Confirmar</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="template-btn">CREAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
