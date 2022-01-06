@@ -31,6 +31,29 @@
     <link rel="stylesheet" href="assets/css/style.scss" />
     <!--====== Responsive CSS ======-->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        .boton1 {
+
+            display: inline-block;
+            width: 50%;
+            padding: 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.9s;
+            text-align: center;
+            font-size: 25px;
+            background: #00499D;
+
+        }
+
+        .boton1:hover {
+
+            background: white;
+            color: black;
+
+        }
+    </style>
 </head>
 
 <body class="software-landing-page">
@@ -57,23 +80,6 @@
                             </li>
                             <li>
                                 <a href="services.html">Servicios</a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="team.html">Our Team</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="blog-standard.html">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-standard.html">Blog Standard</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="contact.html">Contacto</a>
@@ -128,23 +134,6 @@
                         </li>
                         <li>
                             <a href="services.html">Servicios</a>
-                        </li>
-                        <li>
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="team.html">Our Team</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="blog-standard.html">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="contact.html">Contacto</a>
@@ -317,8 +306,7 @@
                 <div class="col-lg-7 col-md-10 order-lg-last order-first wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-primary-color-4 text-right m-b-md-80">
                         <!-- <img src="assets/img/softmor/tablet.png" width="80%" class="preview-one" alt="Image"> -->
-                        <img src="assets/img/softmor/Softmor-POS-APP.jpg"
-                            class="animate-zoom-fade" alt="Image">
+                        <img src="assets/img/softmor/Softmor-POS-APP.jpg" class="animate-zoom-fade" alt="Image">
                     </div>
                 </div>
 
@@ -518,8 +506,8 @@
                 <div class="col-lg-6 col-md-10">
                     <div class="testimonial-slider-wrapper p-l-40 p-l-lg-0">
                         <div class="common-heading m-b-65">
-                            <span class="tagline color-primary-5">Customer Reviews</span>
-                            <h2 class="title">What our clients say about solutions</h2>
+                            <span class="tagline color-primary-5">Valoración de los clientes</span>
+                            <h2 class="title">Lo que dicen nuestros clientes sobre las soluciones</h2>
                         </div>
 
                         <div class="testimonial-slider-v1 quote-left-bordered" id="testimonialActiveFive">
@@ -568,22 +556,14 @@
     <!--====== End Testimonial Area ======-->
 
     <!--====== Start Pricing Section ======-->
-    <section class="pricing-section p-t-130 p-b-130" id="costos">
+    <section class="pricing-section p-t-130 p-b-130" id="costos" style="background: rgb(4,241,242);
+    background: linear-gradient(90deg, rgba(4,241,242,1) 0%, rgba(58,86,240,1) 50%, rgba(138,0,251,1) 100%);">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="common-heading tagline-boxed m-b-70 text-center">
-                        <span class="tagline">Nuestro plan de precios</span>
-                        <h2 class="title">Elija el mejor paquete para su punto de venta</h2>
-
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <label class="label float-right">
+                <div class="col-lg-12 mb-4">
+                    <label class="label d-flex justify-content-center text-white">
                         <div class="label-text mr-2"><strong>Mensual</strong></div>
-                        <div class="toggle">
+                        <div class="toggle bg-grey-color">
                             <input class="toggle-state" type="checkbox" name="check" value="check" checked />
                             <div class="indicator"></div>
                         </div>
@@ -591,8 +571,22 @@
                     </label>
                 </div>
             </div>
-            <!-- Pricing Table -->
             <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="common-heading tagline-boxed m-b-70 text-center">
+                        <h2 class="title">Softmor POS Play</h2>
+                        <h2 class="display-3 text-white">Adquierelo por tan solo $350/mes</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="#" class="boton1">COMENZAR</a>
+                </div>
+            </div>
+
+            <!-- Pricing Table -->
+            <!-- <div class="row justify-content-center">
 
                 <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="pricing-table m-t-30">
@@ -626,7 +620,6 @@
                             <li>Gestión de cotizaciones</li>
                             <li>Reportes</li>
                             <li>Acceso a la aplicación móvil</li>
-                            <!-- <li class="disabled-feature">Tienda en linea</li> -->
                             <li>Control de prestamos internos</li>
                             <li>Control de abonos a prestamos</li>
                             <li>Gestiona tus cuentas por cobrar</li>
@@ -680,7 +673,6 @@
                             <li>Gestión de cotizaciones</li>
                             <li>Reportes</li>
                             <li>Acceso a la aplicación móvil</li>
-                            <!-- <li class="disabled-feature">Tienda en linea</li> -->
                             <li>Control de prestamos internos</li>
                             <li>Control de abonos a prestamos</li>
                             <li>Gestiona tus cuentas por cobrar</li>
@@ -701,7 +693,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--====== End Pricing Section ======-->
