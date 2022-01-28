@@ -31,6 +31,11 @@
     <link rel="stylesheet" href="assets/css/style.scss" />
     <!--====== Responsive CSS ======-->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="stylesheet" href="assets/plugin/select2/css/select2.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="assets/plugin/toastr/build/toastr.min.css">
     <style>
         .boton1 {
 
@@ -55,8 +60,8 @@
         }
     </style>
     <div id="whatsapp-widget" class="ww-right ww-medium ww-yes"> <a target="_blank"
-            href="https://wa.me//?text=Hola, estoy interesado en su sistema." class="ww-text">Recibir información<div
-                class="ww-arrow"></div></a>
+            href="https://wa.me/5217341283343?text=Hola, estoy interesado en su sistema." class="ww-text">Recibir
+            información<div class="ww-arrow"></div></a>
         <div class="ww-icon">
             <div> <a class="ww-icon-link" target="_blank"
                     href="https://wa.me/5217341283343?text=Hola, estoy interesado en su sistema."> <svg
@@ -65,7 +70,7 @@
                             d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
                             fill-rule="evenodd"></path>
                     </svg> </a> </div>
-           
+
         </div>
     </div>
     <style>
@@ -317,7 +322,7 @@
                 opacity: 1;
             }
         }
-    </style>0
+    </style>
 </head>
 
 <body class="software-landing-page">
@@ -361,7 +366,7 @@
                             </a>
                         </li>
                         <li class="d-none d-sm-block">
-                            <a href="https://app.softmor.com/" class="user-login" target="_blank">
+                            <a href="https://app.softmor.com/" class="btn btn-outline-success" target="_blank">
                                 <!-- <i class="far fa-user-circle"></i> -->
                                 Entrar a softmor pos
                             </a>
@@ -858,7 +863,7 @@
                 <div class="col-lg-6">
                     <div class="common-heading tagline-boxed m-b-30 text-center">
                         <h3 class="title">Softmor POS Play</h3>
-                        <h1 class=" text-white">Adquiérelo desde <br> MXN $250<sub>/mes</sub> </h1>
+                        <h1 class=" text-white">Adquiérelo desde <br> MXN $300<sub>/mes</sub> </h1>
                     </div>
                 </div>
             </div>
@@ -1104,6 +1109,9 @@
     <script src="assets/js/wow.min.js"></script>
     <!--====== Main JS ======-->
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/plugin/select2/js/select2.full.min.js"></script>
+    <script src="assets/plugin/toastr/build/toastr.min.js"></script>
 </body>
 
 </html>
@@ -1118,38 +1126,139 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form>
+            <form method="post" id="formRegistroCliente" autocomplete="off">
                 <div class="modal-body">
-                    <div class="contact-form-v2">
+                    <div class="">
+                        <label for="scs_pais">Pais</label>
+                        <select class="form-control select2" name="scs_pais" id="scs_pais">
+                            <option value="">--Seleccionar--</option>
+                            <option value="México">México</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Guayana Francesa">Guayana Francesa</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guayana">Guayana</option>
+                            <option value="Haití">Haití</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="México">México</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Perú">Perú</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="República Dominicana">República Dominicana</option>
+                            <option value="Surinam">Surinam</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="España">España</option>
+                        </select>
+
+                    </div>
+                    <div class="contact-form-v2 ">
+                        <br><br> <br><br>
                         <div class="input-field m-b-30">
-                            <input type="text" id="usr_nombre" placeholder="Nombre completo" name="usr_nombre"
+                            <input type="text" id="nombre" placeholder="Nombre completo" name="nombre" required="">
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="input-field m-b-30">
+                            <input type="email" id="propietario" placeholder="Correo electrónico" name="propietario"
                                 required="">
-                            <label for="usr_nombre">Nombre</label>
+                            <label for="propietario">Correo</label>
                         </div>
                         <div class="input-field m-b-30">
-                            <input type="email" id="usr_correo" placeholder="Correo electrónico" name="usr_correo"
+                            <input type="text" id="telefono" placeholder="Telefono" name="telefono" required="">
+                            <label for="telefono">Telefono</label>
+                        </div>
+
+                        <div class="input-field m-b-30">
+                            <input type="password" id="password" placeholder="Contraseña" name="password" required="">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field ">
+                            <input type="password" id="password_c" placeholder="Confirmar Contraseña" name="password_c"
                                 required="">
-                            <label for="usr_correo">Correo</label>
-                        </div>
-                        <div class="input-field m-b-30">
-                            <input type="text" id="usr_tel" placeholder="Telefono" name="usr_tel" required="">
-                            <label for="usr_tel">Telefono</label>
-                        </div>
-                        <div class="input-field m-b-30">
-                            <input type="password" id="usr_clave" placeholder="Contraseña" name="usr_clave" required="">
-                            <label for="usr_clave">Password</label>
-                        </div>
-                        <div class="input-field m-b-30">
-                            <input type="password" id="usr_clave_c" placeholder="Confirmar Contraseña"
-                                name="usr_clave_c" required="">
-                            <label for="usr_clave_c">Confirmar</label>
+                            <label for="password_c">Confirmar</label>
+                            <input type="hidden" name="scs_cupon" id="scs_cupon" value="">
                         </div>
                     </div>
                 </div>
+                <div class="col-12 alert-loading d-none">
+                    <div class="alert alert-info" role="alert">
+                        <strong>Creando cuenta, espere un momento por favor...</strong>
+                    </div>
+                </div>
+                <div class="col-12 alert-error-correo d-none">
+                    <div class="alert alert-danger text-center" role="alert">
+                        <strong>El correo que intenta registrar ya fue usado. </strong><br>
+                        <a href="https://app.softmor.com/">Iniciar sesión</a>
+
+                    </div>
+                </div>
+
                 <div class="modal-footer">
-                    <button type="submit" class="template-btn">CREAR</button>
+                    <button type="submit" class="template-btn">CREAR CUENTA GRATIS</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    $("#formRegistroCliente").on("submit", function (e) {
+        e.preventDefault();
+
+        if ($("#scs_pais").val() == "") {
+            toastr.error('Seleccione el país', 'Error')
+            return;
+        }
+        if ($("#password").val() != $("#password_c").val()) {
+            toastr.error('Asegúrese de que su contraseña coincida', 'Error')
+            return;
+        }
+        var datos = new FormData(this);
+        $.ajax({
+            type: "POST",
+            url: 'https://app.softmor.com/api/public/api-ifixitmor/prospecto/registro',
+            data: datos,
+            dataType: "json",
+            processData: false,
+            contentType: false,
+            beforeSend: function () {
+
+                $(".template-btn").addClass('d-none')
+
+                $(".alert-error-correo").addClass('d-none')
+
+                $(".alert-loading").removeClass('d-none')
+
+            },
+            success: function (res) {
+                if (res.status == 1) {
+                    window.location.href = './registro-exitoso.html'
+
+                } else if (res.status == 3) {
+                    $(".alert-error-correo").removeClass('d-none')
+                    $(".alert-loading").addClass('d-none')
+                    $(".template-btn").removeClass('d-none')
+                } else {
+                    $(".alert-error-correo").addClass('d-none')
+                    $(".alert-loading").addClass('d-none')
+                    $(".template-btn").removeClass('d-none')
+                    toastr.error('Ocurrio un error en el registro, itente de nuevo', 'Error')
+                }
+
+
+            }
+        });
+    });
+</script>
